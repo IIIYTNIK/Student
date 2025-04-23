@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.student__.mainWindowController">
+   <top>
+      <HBox prefHeight="26.0" prefWidth="740.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onSaveButtonClick" text="Save" />
+                        <MenuItem mnemonicParsing="false" onAction="#onLoadButtonClick" text="Load" />
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Rows">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onEditButtonClick" text="Edit" />
+                    <MenuItem mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Delete" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children></HBox>
+   </top>
+   <right>
+      <VBox prefHeight="374.0" prefWidth="191.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="ID_" promptText="ID" text="148897" />
+            <TextField fx:id="nameField" promptText="ФИО" text="Зубенко Михаил Петрович" />
+            <TextField fx:id="groupField" promptText="Группа" text="ИВТ-23" />
+            <TextField fx:id="ageField" promptText="Возраст" text="32" />
+            <TextField fx:id="courseField" promptText="Курс" text="2" />
+            <TextField fx:id="gradeField" promptText="Средний Балл" text="2.5" />
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#onAddButtonClick" prefHeight="26.0" prefWidth="200.0" text="Добавить" />
+         </children></VBox>
+   </right>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableStudent" prefHeight="380.0" prefWidth="500.0">
+              <columns>
+                  <TableColumn fx:id="idColumn" prefWidth="45.19998246431351" text="Id" />
+                <TableColumn fx:id="nameColumn" prefWidth="239.39997482299805" text="ФИО" />
+                <TableColumn fx:id="groupColumn" prefWidth="47.0" text="Группа" />
+                  <TableColumn fx:id="ageColumn" prefWidth="66.0" text="Возраст" />
+                  <TableColumn fx:id="courseColumn" prefWidth="62.5999755859375" text="Курс" />
+                  <TableColumn fx:id="gradeColumn" prefWidth="90.20004272460938" text="Средний Балл" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
